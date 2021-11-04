@@ -1,0 +1,34 @@
+$btn-color: white;
+
+.error {
+    background-color: gray;
+    border: 2px solid $themecolor;
+    position: absolute;
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    left: 20%;
+    top: 30%;
+
+    & span {
+        color: $themecolor;
+    }
+
+    & p {
+        margin: 20px 0;
+        color: rgb(228, 226, 226);
+    }
+
+    & button {
+        padding: 5px 10px;
+        background-color: transparent;
+        border: 1px solid $btn-color;
+        color: $btn-color;
+        align-self: center;
+
+        &:hover {
+            @include hover-params;
+        }
+    }
+}

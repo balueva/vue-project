@@ -1,0 +1,102 @@
+[
+  {
+	"id": 1001,
+	"name": "Men's navy jacket",
+	"gender": "m",
+	"size": "M",	
+	"color": "Navy",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card1.jpg"],
+	"price": 52
+  },
+  {
+	  "id": 1002,
+	"name": "Women's black pantsuit",
+	"gender": "f",
+	"size": "S",	
+	"color": "Black",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card2.jpg", "card2_2.jpg", "card2_3.jpg"],
+	"price": 40
+  },
+  {
+	  "id": 1003,
+	"name": "Men's white shorts",
+	"gender": "m",
+	"size": "M",	
+	"color": "White",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card3.jpg"],
+	"price": 20
+  },
+  {
+	  "id": 1004,
+    "name": "Men's sand-colored trousers",
+	"gender": "m",
+	"size": "M",	
+	"color": "Sand",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card4.jpg"],
+	"price": 40
+  },
+  {
+	  "id": 1005,
+	"name": "Women's blue jacket",
+	"gender": "f",
+	"size": "S",	
+	"color": "Blue",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card5.jpg"],
+	"price": 20
+  },
+  {
+	  "id": 1006,
+	"name": "Women's grey blouse",
+	"gender": "f",
+	"size": "S",	
+	"color": "Gray",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card6.jpg"],
+	"price": 30
+  },
+  {
+	  "id": 1007,
+	"name": "Men's dark grey trousers",
+	"gender": "f",
+	"size": "S",	
+	"color": "Dark gray",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card7.jpg"],
+	"price": 31
+  },
+  {
+	  "id": 1008,
+	"name": "Men's white t-shirt",
+	"gender": "f",
+	"size": "S",	
+	"color": "White",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card8.jpg"],
+	"price": 32
+  },
+  {
+	  "id": 1009,
+	"name": "Men's white t-shirt",
+	"gender": "f",
+	"size": "S",	
+	"color": "White",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card9.jpg"],
+	"price": 33
+  },
+  {
+	  "id": 1010,
+	"name": "Men's white shirt",
+	"gender": "f",
+	"size": "S",	
+	"color": "White",
+	"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+	"images": ["card10.jpg"],
+	"price": 34
+  }
+]

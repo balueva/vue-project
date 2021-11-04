@@ -1,0 +1,122 @@
+$color1: lightgrey;
+$color2: #4A4A4A;
+
+
+.registration {
+    margin-top: 64px;
+    margin-bottom: 96px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+
+        & form {
+            max-width: $card-width;
+
+            display: flex;
+            flex-direction: column;
+    
+            & p {
+                margin-top: 15px;
+                margin-bottom: 39px;
+    
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 16px;
+                color: #B1B1B1;
+                }
+     
+            & button {
+                padding: 16px 25px 16px 30px;
+                font-size: 14px;
+                line-height: 17px;
+                color: white;
+                background-color: $themecolor;
+                border: 1px solid $themecolor;
+                align-self: flex-start;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: white;
+                    color: $themecolor
+                }
+
+                & > span {
+                    padding-right: 20px;
+                }
+            } 
+
+            .radio-group {
+                padding: 35px 0;
+            }
+        }
+
+        
+        &__list {
+            padding-left: 128px;
+
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: black;
+
+            & h4 {
+                margin-bottom: 20px;
+            }
+
+            & ul {
+                list-style: url(../img/tick.svg);
+                list-style-position: inside;  
+                
+                & li {
+                    padding-top: 22px;
+                }
+            }
+        }
+
+    }
+   
+}
+
+@media (max-width: $pad-width) {
+    .registration {
+
+        &__wrap {
+
+            &__list {
+                padding-left: 22px;
+                font-size: 16px;
+                line-height: 19px;    
+                
+                & p {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $phone-width) {
+    .registration {
+
+        &__wrap {
+            flex-direction: column;
+
+            &__list {
+
+                & h4 {
+                    padding-top: 40px;
+                }
+
+                & p {
+                    padding-bottom: 6px;
+                }
+
+                & li {
+                    padding-top: 16px;
+                }
+            }
+        }
+    }
+
+}

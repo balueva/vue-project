@@ -1,0 +1,145 @@
+.subscribe {
+    height: 448px;
+    background: url('../img/subscribe_bg.png'),
+    linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: soft-light;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__photo {
+        max-width: $card-width;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+
+        & > img {
+            align-self: center;
+        }
+
+        & > p {
+            padding-top: 48px;
+        }
+    }
+
+    &__do {
+        align-self: center;
+    }
+
+    &__form {
+        margin-top: 32px;
+        display: flex;
+
+        & input {
+            font-size: 14px;
+            line-height: 17px;
+            color: #222224;
+            opacity: 0.67;
+            padding: 10px;
+            background-color: #E1E1E1;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            border: #E1E1E1 1px solid;
+            display: block;
+            flex-grow: 1;
+
+            &:focus {
+                outline: none;
+                border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            border: #6F6E6E 1px solid;
+            
+            }
+        }
+
+        & button {
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;   
+            color: #FFFFFF;
+            padding: 10px;
+            background-color: $themecolor;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            border: $themecolor 1px solid;
+            display: block;
+            cursor: pointer;
+
+            &:hover {
+                @include hover-params;
+            }
+        }
+    }
+}
+
+.subscribe-text {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color:#222224;
+    font-weight: normal;
+}
+
+.subscribe-text-itallic {
+    font-style: italic;
+}
+
+.subscribe-text-big {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 167.2%;
+    text-align: center;
+    color: #222224;
+    display: block;
+}
+
+
+@media (max-width: $pad-width) {
+    .subscribe {
+        height: 694px;
+        background-position: bottom;
+
+        &__wrap {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__photo {
+            padding-top: 54px;
+            width: 80%;
+            
+        }
+
+        &__do {
+            padding-bottom: 140px;
+        }
+    }
+
+    .subscribe-text-big {
+        line-height: 162%;
+    }
+}
+
+@media (max-width: $phone-width) {
+    .subscribe {
+        height: 550px;
+
+        &__do {
+            padding-bottom: 110px;
+        }
+    }
+
+    .subscribe-text-big {
+        line-height: 153%;
+    }
+
+    .subscribe-text {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}

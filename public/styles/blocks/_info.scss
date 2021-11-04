@@ -1,0 +1,118 @@
+.info {
+    position: relative; /* поверх вышестоящего блока */
+    border: 1px solid #EAEAEA;
+    background-color: white;
+    margin-top: -60px; 
+    display: flex;
+    justify-content: center;
+    
+    &__wrap {
+        max-width: 555px;
+        padding: 65px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    & h2 {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: $themecolor;
+    }
+
+    &__line1 {
+        width: 65px;
+        border: none;
+        border-top: 3px solid $themecolor;
+        margin: 12px 0;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color: #4D4D4D;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #5E5E5E;
+        /* padding: 48px 42px 32px 42px; */
+        padding: 48px 0 32px 0;
+    }
+    
+    &__price {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;    
+        color: $themecolor;    
+    }
+
+    &__line2 {
+        margin: 65px 0;
+        width: 100%;
+        border: none;
+        border-top: 1px solid  #EAEAEA;
+    }
+
+    &__add {
+        background-color: white;
+        border-color:  $themecolor;
+        border-style: solid;
+        padding: 14px 24px;
+        font-size: 16px;
+        line-height: 19px;
+        color: $themecolor;
+        display: flex;
+
+        &:hover {
+            cursor: pointer;
+            @include hover-params;
+        }
+
+        & img {
+            filter: invert(55%) sepia(60%) 
+            saturate(1836%) hue-rotate(313deg) 
+            brightness(103%) contrast(89%);
+        }
+        
+        & span {
+            padding-left: 24px;
+            align-self: center;
+        }
+    }
+}
+
+@media (max-width: $pad-width) {
+    .info {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: $phone-width) {
+    .info {
+
+        &__description {
+            padding: 32px 0;
+        }
+
+        &__price {
+            line-height: 130%;
+        }
+
+        &__line2 {
+            margin: 32px 0 50px;
+            max-width: 173px;
+        } 
+        
+        & .font-correct {
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import 'vars';
+
+@mixin hover-params {
+    opacity: 0.7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:not(.footer__right__groups):hover {
+    @include hover-params;
+}
+
+.container {
+    max-width:1140px;
+    width: 100%;
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+}
+
+
+@media (max-width: $pad-width) {
+    .container {
+        max-width: 735px;
+        /*outline: 1px solid yellow; */
+    }
+}
+
+@media (max-width: $phone-width) {
+    .container {
+        max-width: 360px;
+        /* outline: 1px solid green; */
+    }
+}
+
+@import 'eforms';
+
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/category';
+@import 'blocks/cards';
+@import 'blocks/offers';
+@import 'blocks/subscribe';
+@import 'blocks/footer';
+@import 'blocks/breadcrumb-panel';
+@import 'blocks/filter-panel';
+@import 'blocks/pages';
+@import 'blocks/slider';
+@import 'blocks/info';
+@import 'blocks/cart';
+@import 'blocks/registration';
+@import 'blocks/error';

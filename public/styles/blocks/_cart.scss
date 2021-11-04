@@ -1,0 +1,283 @@
+$cart-textcolor: #575757;
+
+.cart {
+    margin: 96px 0 128px; 
+
+    & .decor {
+        color: $themecolor;    
+    }
+    
+   &__wrap {
+        display: flex;
+        justify-content: space-between;
+   } 
+
+   
+   &__adress {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+
+        & button {
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+            border: 1px solid #A4A4A4;
+            background-color: white;
+            margin: 24px 0;
+            padding: 10px 14px;
+            align-self: flex-start;
+            text-transform:  uppercase;
+            cursor: pointer;
+
+            &:hover {
+                @include hover-params;
+            }
+        }
+    }
+
+   &__summary {
+        display: flex;
+        flex-direction: column;
+        background-color: #F5F3F3;
+        padding: 42px;
+        width: 360px;
+        height: 214px;
+        margin-top: 60px;
+
+        & .p1 {
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+            margin-bottom: 12px;
+            align-self: flex-end;;
+        }
+
+        & .p2 {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+            align-self: flex-end;
+        }
+
+        & hr {
+            border: none;
+            border-top: 1px solid #E2E2E2;
+            margin: 21px 0 17px;
+        }
+
+        & button {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            background-color: $themecolor;
+            cursor: pointer;
+
+            &:hover {
+                @include hover-params;
+            }
+        }
+   }
+
+   &__item {
+        display: flex;
+        margin-bottom: 40px;
+        box-shadow: 20px 20px 10px #E5E5E5;
+    
+        &__photo,
+        &__photo > img { 
+            height: 306px;
+        }
+
+        &__about {
+            max-width: 390px;
+            padding: 22px 60px 22px 31px;
+            font-size: 22px;
+            line-height: 26px;
+            color: $cart-textcolor;
+
+            
+            & h4 {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 29px;
+                color: #222222;
+                margin-bottom: 42px;
+            }
+
+            & p {
+                margin-bottom: 4px;
+            }  
+            
+            & input {
+                font-size: 18px;
+                line-height: 22px;
+                color: #656565;
+                padding: 0 16px;
+                margin-left: 24px;
+                width: 20%;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none; 
+                }
+                
+                &,
+                &:hover,
+                &:focus {
+                    appearance: none;
+                    -moz-appearance: textfield;
+                }
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid #EAEAEA;
+                }
+            }
+
+            & .quantity {
+                display: flex;
+            }
+
+        }
+
+        & button {
+            border: none;
+            background-color: white;
+            padding: 28px 22px 0 0;
+            align-self: flex-start;
+            font-size: 34px;
+            line-height: 17px;  
+            color: $cart-textcolor;
+            cursor: pointer;
+
+            &:hover {
+                @include hover-params;
+            }
+        }
+
+        
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+        & button, & a {
+            padding: 16px 40px;
+            background-color: white;
+            border: 1px solid #A4A4A4;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: black;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            &:hover {
+                @include hover-params;
+            }
+        }
+    }
+}
+
+@media (max-width: $pad-width) {
+    .cart {
+        margin: 59px 0 128px; 
+
+        &__wrap {
+            flex-direction: column;
+        }
+
+        &__buttons {
+            padding: 0 130px;
+        }
+
+        &__info {
+            padding-top: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & > div {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &__summary {
+            margin-top: 20px;
+            /*margin-bottom: ;*/
+        }
+    }
+}
+
+@media (max-width: $phone-width) {
+    .cart {
+        margin: 39px 0 96px; 
+
+        &__item {
+            margin-bottom: 32px;
+        
+            &__photo,
+            &__photo > img { 
+                height: 188px;
+            }
+
+            &__about {
+                padding: 13px 17px;
+            
+                font-size: 14px;
+                line-height: 17px;
+            
+                & h4 {
+                    font-size: 16px;
+                    line-height: 19px;  
+                    margin-bottom: 25px;                   
+                }
+
+                & input {
+                    font-size: 10px;
+                    line-height: 12px;
+                    padding: 0 6px;
+                }    
+            }
+
+            & button {
+                padding: 12px 12px 0 0;
+                align-self: flex-start;
+                font-size: 14px;                 
+            }
+        }
+
+        &__info {
+            & > div {
+                flex-direction: column;
+            }
+        }
+
+        &__buttons {
+            padding: 0;
+            
+            & button {
+                padding: 9px 17px;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+                text-transform:  none;
+            }
+        }
+
+        &__adress button {
+            text-transform:  none;       
+        }
+    }
+}
+

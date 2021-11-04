@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Интернет-магазин</title>
+</head>
+
+<body>
+    <div id="app">
+        <header-comp ref="header"></header-comp>
+        <main>
+            <error-comp ref="error"></error-comp>
+            <router-view ref="routerview"></router-view>
+            <subscribe-comp></subscribe-comp>
+        </main>
+        <footer-comp></footer-comp>
+    </div>
+
+    <script defer src="https://kit.fontawesome.com/b0f6f9cbd1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+
+    <script src="js/CartContentComp.js"></script>
+
+    <script src="js/FilterComp.js"></script>
+    <script src="js/HeaderComp.js"></script>
+
+    <script src="js/ErrorComp.js"></script>
+
+    <script src="js/IntroComp.js"></script>
+    <script src="js/CategoryComp.js"></script>
+    <script src="js/CardComp.js"></script>
+    <script src="js/CardsComp.js"></script>
+    <script src="js/OffersComp.js"></script>
+
+    <script src="js/PanelCaptionComp.js"></script>
+
+    <script src="js/SubscribeComp.js"></script>
+    <script src="js/FooterComp.js"></script>
+
+    <script src="js/CatalogComp.js"></script>
+    <script src="js/CartComp.js"></script>
+
+    <script src="js/ProductInfoComp.js"></script>
+    <script src="js/ProductComp.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

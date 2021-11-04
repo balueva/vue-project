@@ -1,0 +1,59 @@
+.slider {
+    //height: 777px;
+    background-color:#F7F7F7; 
+    
+    display: flex;
+    justify-content: space-between;
+    /*border: 1px solid blue; */
+
+    & > button {
+        height: 47px;
+        width: 47px;
+        padding: 12px 17px;
+        border: none;
+        background-color: rgba(42, 42, 42, 0.15);
+        align-self: center;
+        font-size: 18px;
+
+        &:hover {
+            color: $themecolor;
+            @include hover-params;
+            cursor: pointer;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            color: rgba(42, 42, 42, 0.226);
+        }
+    }
+
+    & > div {
+        overflow: hidden;
+        padding: 24px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        /* border: 1px solid yellowgreen;*/
+    } 
+}
+
+@media (max-width: $pad-width) {
+    .slider {
+        //height: 624px;
+
+        & > div {
+            padding: 28px 0;
+        }
+    }
+}
+
+@media (max-width: $phone-width) {
+    .slider {
+
+        & > div {
+            padding: 105px 0;
+        }
+    }
+}
+

@@ -1,0 +1,272 @@
+
+.header {
+    background-color: #222222;
+    display: flex;
+    justify-content: flex-end; 
+    position: relative;
+    z-index: 10; 
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 18px;
+        padding-bottom: 18px;        
+    }
+
+    &__left {
+        display: flex;
+
+        & div {
+            display: flex;
+        }
+
+        & form {
+            display: flex;
+            align-items: center;
+        }
+        
+        & input {
+            //margin-top: 2px;
+            font-size: 14px;
+            line-height: 17px;
+            color: white;
+            background-color: inherit;
+            padding: 5px;
+            border: #E1E1E1 1px solid;
+            border-radius: 3px;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &  button {
+            //display: flex;
+            //align-items: center;
+            background-color: inherit;
+            border: none;
+
+            &:hover {
+                @include hover-params;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__logo {
+        margin-right: 33px;
+
+        &:hover {
+            @include hover-params;
+        }
+    }
+
+    &__menu {
+        color: #E8E8E8;
+        font-size: 34px;
+        cursor: pointer;
+
+        &:hover {
+            @include hover-params;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        background-color: white;
+        /* outline: 1px solid green; */
+        top: 78px;
+        right: 0;
+        z-index: 12;
+        width: 232px;
+        height: calc(100vh - 78px);
+        overflow-x: scroll;
+
+        color: #6F6E6E;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 33px;
+
+        &__wrap {
+            position: relative;
+
+            & .menu-close {
+                position: absolute;
+                cursor: pointer;
+                
+                top: -16px; 
+                right: -16px;
+
+                &:hover {
+                    @include hover-params;
+                }
+            }
+
+            & h2 {
+                color: black;
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+
+            & h3 {
+                padding-top: 20px;
+                color: $themecolor;
+            }
+
+            & ul {
+                list-style: none;
+
+                & li {
+                    
+                    padding-top: 10px;
+                    padding-left: 20px;
+
+                    & a {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        margin-left: 33px;
+    }
+    
+    &__cart {
+        display: block;
+        box-shadow: 20px 20px 10px #E5E5E5;
+
+        position: absolute;
+        top: 55px;
+        right: 0;
+        background-color: white;
+
+        color: #6F6E6E;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;            
+/*
+        & th, td {
+            padding: 7px;
+        }
+
+        & th {
+            text-transform: uppercase;
+        }
+        
+        & div {
+            padding: 7px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        & span {
+            color: $themecolor;
+        } */
+    } 
+}
+
+.popupcart-empty {
+    padding: 15px;
+}
+
+.popupcart {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    &__item {
+        display: flex;
+        padding-bottom: 10px;
+
+        & > img {
+            height: 100px;
+        }
+
+        & > div {
+            padding-left: 10px;
+            padding-right: 10px;
+            flex-grow: 1;
+
+            & > a {
+                color: $themecolor;
+                text-transform: uppercase;
+            }
+        }
+
+        & > button {
+            color: #575757;
+            align-self: flex-start;
+            background-color: inherit;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 17px;
+        }        
+    }
+
+    & >  p {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    & > a {
+        color: white;
+        padding: 5px 10px;
+        align-self: center;
+        border: $themecolor 1px solid;
+        background-color: $themecolor;
+
+        &:hover {
+            @include hover-params;
+        }
+    }
+}
+
+#showCart {
+    position: relative;
+    
+    & span {
+        position: absolute;
+        top: -20px;
+        right: -5px;
+        color: white;
+        background-color: $themecolor;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 2px 5px;
+        border-radius: 50%;
+    }
+}
+
+#burger {
+    display: none;
+}
+
+
+#burger:checked ~ .header_nav {
+    display: block; 
+  }
+  
+  #burger:not(:checked) ~ .header__nav {
+    display: none; 
+  }
+
+
+@media (max-width: $phone-width) {
+    .header {
+                
+        &__item {
+            
+            &:not(:first-child) {
+                display: none;
+            }
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,180 @@
+/* родительски блоки карточек на разных страницах */
+
+.cards {
+    margin: 95px 0;
+
+    &__title {
+        font-size: 30px;
+        line-height: 36px;   
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+        margin-bottom: 48px;    
+    }
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;    
+    }
+
+    &__button {
+        font-size: 16px;
+        line-height: 19px;
+        color: $themecolor;
+        border: $themecolor 1px solid;
+        padding: 15px 40px;
+        margin-top: 18px;  
+        
+        &:hover {
+            color: white;
+            background-color: $themecolor;
+        }
+        
+    }
+}
+
+.cards__align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .headerinfo {
+        display: flex;
+        flex-direction: column;
+        
+        & * {
+            display: flex;
+            justify-content: center
+        }
+    }
+}
+
+/* карточка товара */
+
+.cards__item {
+    background-color: #F8F8F8;
+    width: $card-width;
+    height: 580px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &__img > img {
+        width: 100%;
+    }
+
+    &:hover &__overlay {
+        opacity: 1;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 420px;
+        background-color: rgba(58, 56, 56, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+
+        & button {
+            padding: 11px;
+            background:rgba(255, 255, 255, 0);
+            font-size: 14px;
+            line-height: 17px;
+            color: white;
+            display: flex;
+            border: white 1px solid;
+            cursor: pointer;
+
+            &:hover {
+                @include hover-params;
+            }
+        }
+        
+        & button > span {
+            padding-left: 11px;
+            align-self: center;
+        }
+        
+    } 
+
+    &__info {
+        margin: 25px 20px 20px 20px;
+
+         
+        & h3 {
+            font-size: 13px;
+            line-height: 16px;
+            color: black;
+            font-weight: normal;  
+            text-transform: uppercase;
+        }
+
+        & p,
+        & .item__description { /* временно для совместимости с другими страницами */
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;   
+            color: #5D5D5D;
+        
+            margin-top: 12px;
+            margin-bottom: 18px;
+        }
+     
+        & span,
+        & .item__price { /* временно для совместимости с другими страницами */
+            font-size: 16px;
+            line-height: 19px;    
+            color: $themecolor;
+        } 
+        
+    }
+}
+
+.catalog__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+/* блок карточек на странице товара */
+.cards-product {
+    margin-top: 130px;
+    margin-bottom: 100px;
+    padding: 0;
+}
+
+@media (max-width: $pad-width) {
+    .cards {
+        margin: 156px 0 65px;
+
+        &__description {
+            margin-bottom: 64px;    
+        }
+    }
+
+    .cards__item {
+        margin-bottom: 16px;   
+    }
+}
+
+@media (max-width: $phone-width) {
+    .cards {
+        margin: 65px 0 95px;
+
+        &__description {
+            margin-bottom: 72px;    
+        }
+    }
+
+    .cards-product {
+        margin-top: 64px;
+        margin-bottom: 49px;
+    }
+}
